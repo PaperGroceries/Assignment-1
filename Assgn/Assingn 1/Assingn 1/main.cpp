@@ -72,7 +72,7 @@ int main()
         cout << " 1.EAN-8\n";
         cout << " 2.UPC-A\n";
         cout << " 3.EAN-13\n";
-        cout << " 4.EAN-14\n";
+        cout << " 4.ITF-14\n";
         cout << " 5.SSCC\n";
         cout << "____________________\n";
     cout << "Choose your product code type: ";
@@ -87,7 +87,7 @@ int main()
    else if ( choice == 2)
    {
         cout << "Please enter the first 12 digit numbers\n";
-        number_size = 10;
+        number_size = 11;
    }
         
    else if ( choice == 3)
@@ -103,7 +103,7 @@ int main()
    else if ( choice == 5)
    {
         cout << "Please enter the first 17 digit numbers\n";
-        number_size = 16;
+        number_size = 17;
    }
    else if ( choice > 5)
    {
@@ -122,6 +122,7 @@ int main()
         {
             cout << arr[i];
         }
+        cout << compute_check_digit(arr, number_size) << endl ;
     //UPC-A
     //EAN-13
     //EAN-14
