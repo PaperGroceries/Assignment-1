@@ -19,6 +19,7 @@ int compute_check_digit(int arr[], int size){
     int sum = 0;
     for (int i = size - 1; i >= 0 ; i = i - 2 ){
         sum += arr[i];
+        //sum = sum + arr[i];
     }
     // cout << sum;
     // cout << endl;
@@ -27,7 +28,6 @@ int compute_check_digit(int arr[], int size){
     // Step 2: multiply the answer by 3
     // 18 x 3 = 54
     sum *= 3;
-
     
 
     // Step 3: now add together the remaining numbers
