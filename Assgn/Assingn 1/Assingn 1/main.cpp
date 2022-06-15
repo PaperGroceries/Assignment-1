@@ -66,14 +66,15 @@ int main()
     
     do
     {
-   
-
         cout << endl;
+        cout << "Check Digit Calculator\n";
+        cout << "____________________\n";
         cout << " 1.EAN-8\n";
         cout << " 2.UPC-A\n";
         cout << " 3.EAN-13\n";
         cout << " 4.EAN-14\n";
         cout << " 5.SSCC\n";
+        cout << "____________________\n";
     cout << " Choose your product code type: ";
     cin >> choice;
 
@@ -112,6 +113,7 @@ int main()
         {
             cin >> arr[i];
         }
+        cout << "____________________\n";
         cout << "The check digit is ";
         cout << compute_check_digit(arr, number_size) << endl ;
         cout << "The product code is " ;
