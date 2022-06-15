@@ -75,7 +75,7 @@ int main()
         cout << " 4.EAN-14\n";
         cout << " 5.SSCC\n";
         cout << "____________________\n";
-    cout << " Choose your product code type: ";
+    cout << "Choose your product code type: ";
     cin >> choice;
 
     if (choice == 1)
@@ -105,9 +105,10 @@ int main()
         cout << "Please enter the first 17 digit numbers\n";
         number_size = 16;
    }
-   else
+   else if ( choice > 5)
    {
-       cout << "wrong";
+       cout << "Error: " << choice << " is an invalid choice\n";
+       break;
    }
         for (i = 0; i < number_size; i++ )
         {
