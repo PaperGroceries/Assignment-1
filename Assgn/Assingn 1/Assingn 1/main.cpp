@@ -59,6 +59,42 @@ int compute_check_digit(int arr[], int size){
 
 int main()
 {
+    int choice;
+    do
+    {
+   
+
+        cout << endl;
+        cout << " 1.EAN-8\n";
+        cout << " 2.UPC-A\n";
+        cout << " 3.EAN-13\n";
+        cout << " 4.EAN-14\n";
+        cout << " 5.SSCC\n";
+    cout << " Choose your product codde type: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+    //EAN-8
+    case 2:
+    //UPC-A
+    case 3:
+    //EAN-13
+    case 4:
+    //EAN-14
+    case 5:
+    //SSCC
+    default:
+    cout << "Not a Valid Choice. \n"
+    << "Choose again.\n";
+    break;
+    }
+
+    }while (choice <=5);
+    
+    
+    
     int i;
     
     int arr[12];
