@@ -12,7 +12,7 @@ using namespace std;
 // takes 12 digits and return the check digit
 int compute_check_digit(int arr[], int size){
     int check_digit;
-    ;// to be implemented
+    // to be implemented
     // Step 1: add together all alternate numbers starting from the right
     // 5 0 1 2 3 4 5 7 6 4 2 1
     // 0 + 2 + 4 + 7 + 4 + 1 = 18
@@ -59,11 +59,15 @@ int compute_check_digit(int arr[], int size){
 
 int main()
 {
+    int i;
+    
     int arr[12] = {
-        5,0,1,2,3,4,5,7,6,4,2,1
     };
-    // for ()//
-    // cin >> arr[i]
+    for (i = 0; i <= 12; i++ )
+    {
+        cin >> arr[i];
+    }
+    
     cout << compute_check_digit(arr, 12); // 4
 
 
