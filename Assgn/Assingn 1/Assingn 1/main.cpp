@@ -61,11 +61,8 @@ int main()
 {
     int choice;
     int i;
-    int arr_EAN_8[12];
-    int arr_UPC_A[12];
-    int arr[12];
-    int arr_EAN_14[12];
-    int arr_SSCC[12];
+    int number_size = 0;
+    int arr[17];
     
     do
     {
@@ -80,68 +77,59 @@ int main()
     cout << " Choose your product code type: ";
     cin >> choice;
 
-    switch (choice)
+    if (choice == 1)
     {
-    case 1:
-    //EAN-8
-            cout << "Please enter the first 12 digit numbers\n";
-            for (i = 0; i < 12; i++ )
-            {
-                cin >> arr_EAN_8[i];
-            }
-            cout << "Last sigit:\n";
-            cout << compute_check_digit(arr_EAN_8, 12);
-            break;
-    case 2:
+        cout << "Please enter the first 7 digit numbers\n";
+        number_size = 7;
+    }
+    
+   else if ( choice == 2)
+   {
+        cout << "Please enter the first 12 digit numbers\n";
+        number_size = 10;
+   }
+        
+   else if ( choice == 3)
+   {
+        cout << "Please enter the first 12 digit numbers\n";
+        number_size = 12;
+   }
+   else if ( choice == 4)
+   {
+        cout << "Please enter the first 13 digit numbers\n";
+        number_size = 13;
+   }
+   else if ( choice == 5)
+   {
+        cout << "Please enter the first 17 digit numbers\n";
+        number_size = 16;
+   }
+   else
+   {
+       cout << "wrong";
+   }
+        for (i = 0; i < number_size; i++ )
+        {
+            cin >> arr[i];
+        }
+        cout << "The check digit is ";
+        cout << compute_check_digit(arr, number_size) << endl ;
+        cout << "The product code is " ;
+        for (i = 0; i < number_size; i++ )
+        {
+            cout << arr[i];
+        }
     //UPC-A
-            cout << "Please enter the first 12 digit numbers\n";
-            for (i = 0; i < 12; i++ )
-            {
-                cin >> arr_UPC_A[i];
-            }
-            cout << "Last sigit:\n";
-            cout << compute_check_digit(arr_UPC_A, 12);
-            break;
-    case 3:
     //EAN-13
-            cout << "Please enter the first 12 digit numbers\n";
-            for (i = 0; i < 12; i++ )
-            {
-                cin >> arr[i];
-            }
-            cout << "Last sigit:\n";
-            cout << compute_check_digit(arr, 12);
-            break;
-    case 4:
     //EAN-14
-            cout << "Please enter the first 12 digit numbers\n";
-            for (i = 0; i < 12; i++ )
-            {
-                cin >> arr_EAN_14[i];
-            }
-            cout << "Last sigit:\n";
-            cout << compute_check_digit(arr_EAN_14, 12);
-            break;
-    case 5:
     //SSCC
-            cout << "Please enter the first 12 digit numbers\n";
-            for (i = 0; i < 12; i++ )
-            {
-                cin >> arr_SSCC[i];
-            }
-            cout << "Last sigit:\n";
-            cout << compute_check_digit(arr_SSCC, 12);
-            break;
-    default:
-            cout << "test";
+           
 //    cout << "Not a Valid Choice. \n"
 //    << "Choose again.\n";
-            
-    break;
            
     }
 
-    }while (choice <=5);
+    while (choice <=5);
     
     
     
