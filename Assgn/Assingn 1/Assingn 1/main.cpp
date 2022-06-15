@@ -77,9 +77,8 @@ int main()
         cout << " 3.EAN-13\n";
         cout << " 4.EAN-14\n";
         cout << " 5.SSCC\n";
-    cout << " Choose your product codde type: ";
+    cout << " Choose your product code type: ";
     cin >> choice;
-        cout << choice << endl ;
 
     switch (choice)
     {
@@ -92,6 +91,7 @@ int main()
             }
             cout << "Last sigit:\n";
             cout << compute_check_digit(arr_EAN_8, 12);
+            break;
     case 2:
     //UPC-A
             cout << "Please enter the first 12 digit numbers\n";
@@ -101,6 +101,7 @@ int main()
             }
             cout << "Last sigit:\n";
             cout << compute_check_digit(arr_UPC_A, 12);
+            break;
     case 3:
     //EAN-13
             cout << "Please enter the first 12 digit numbers\n";
@@ -110,6 +111,7 @@ int main()
             }
             cout << "Last sigit:\n";
             cout << compute_check_digit(arr, 12);
+            break;
     case 4:
     //EAN-14
             cout << "Please enter the first 12 digit numbers\n";
@@ -119,6 +121,7 @@ int main()
             }
             cout << "Last sigit:\n";
             cout << compute_check_digit(arr_EAN_14, 12);
+            break;
     case 5:
     //SSCC
             cout << "Please enter the first 12 digit numbers\n";
@@ -128,10 +131,14 @@ int main()
             }
             cout << "Last sigit:\n";
             cout << compute_check_digit(arr_SSCC, 12);
-//    default:
+            break;
+    default:
+            cout << "test";
 //    cout << "Not a Valid Choice. \n"
 //    << "Choose again.\n";
+            
     break;
+           
     }
 
     }while (choice <=5);
