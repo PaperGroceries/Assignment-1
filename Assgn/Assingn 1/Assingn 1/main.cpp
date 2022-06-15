@@ -61,9 +61,9 @@ int main()
 {
     int i;
     
-    int arr[12] = {
-    };
-    for (i = 0; i <= 12; i++ )
+    int arr[12];
+    cout << "Please enter the 12 digit number\n";
+    for (i = 0; i < 12; i++ )
     {
         cin >> arr[i];
     }
